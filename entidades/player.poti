@@ -7,7 +7,7 @@ tipo Jogador
 	#var inimigos: Lista[Inimigo]
 
 	# atributos
-	var venceu = falso
+	var venceu := falso
 	vel = 50
 	var caixa_colisao := Caixa(x, y, l, h)
 

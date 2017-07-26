@@ -1,12 +1,14 @@
 tipo Camera
   # construtor
-	l, h: Inteiro
+	altura, largura: Inteiro
 	jogador: Jogador
 
-  # metodos
+  # funções internas
 	maior(a, b: Real) = se a > b então a senão b fim
 	menor(a, b: Real) = se a > b então b senão a fim
+  janela(jogador, janela, mapa: Real) = menor(maior(jogador - janela / 2, 0), mapa - janela)
 
-	ox() = menor(maior(jogador.x - 320, 0), l * 32 - 640)
-  oy() = menor(maior(jogador.y - 240, 0), h * 32 - 480)
+	# metodos
+	ox() = janela(jogador.x, jogo.largura, largura)
+  oy() = janela(jogador.y, jogo.altura, altura)
 fim
