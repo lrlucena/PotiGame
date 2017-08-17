@@ -33,7 +33,7 @@ tipo Caixa
 
 		colisao = Colisao(check[1], check[2], check[3], check[4])
 
-		retorne Tupla(colisao.colidiu, venceu)
+		retorne (colisao.colidiu, venceu)
 	fim
 
 	checar_colisao(caixa: Caixa) = (para p em caixa.pontos gere
